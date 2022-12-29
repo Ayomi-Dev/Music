@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="App.css">
+    <link rel="stylesheet" href="music.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,
+    200&family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5dd300959c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
+    <title>Music App</title>
+    <script src="App.js" async></script>
+    <script src="song.js" async></script>
+</head>
+<body>
+    <div class="container">
+        <!-- ------SIDE-BAR OPTIONS/MENU STARTS------------ -->
+        <div class="sideBar" id="sideBar">
+            <div class="toggle" id="toggle">
+                <i class="fas fa-music" ></i>
+                <h2>My Library</h2>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <ul>
+                <li class="nav-list active" id="showHome">
+                        <i class="fas fa-house-user" style="--clr:#f44336;"></i>
+                        <span>Home</span>
+                </li>
+                <li class="nav-list" id="showAlbums">
+                    <i class="fas fa-record-vinyl" style="--clr:#ffa117;" ></i>
+                    <span>Albums</span>
+                </li>
+                <li class="nav-list" id="artist">
+                    <i class="fa-regular fa-user" style="--clr:#0fc707;" ></i>
+                    <span>Artists</span>
+                </li>
+                <li class="nav-list" id="playlist">
+                     <i class="fas fa-music " style="--clr:#2196f3;" ></i>
+                    <span>Playlists</span>
+                </li>
+                <div class="sub-playlist">
+                    <h3><i class="fa fa-record-vinyl"></i>Frequently played</h3>
+                    <li class="songItem">
+                        <span>01</span>
+                        <img src="" alt="">
+                        <h5>Ire <br>
+                            <div class="subtitle">Adekunle Gold</div>
+                        </h5>
+                        <i class="fa  playSong fa-circle-play" id="1"></i>
+                    </li>
+                    <li class="songItem">
+                        <span>02</span>
+                        <img src="" alt="">
+                        <h5>Ire <br>
+                            <div class="subtitle">Adekunle Gold</div>
+                        </h5>
+                        <i class="fa playSong fa-circle-play" id="2"></i>
+                    </li>
+                    <li class="songItem">
+                        <span>03</span>
+                        <img src="" alt="">
+                        <h5>Ire <br>
+                            <div class="subtitle">Adekunle Gold</div>
+                        </h5>
+                        <i class="fa playSong fa-circle-play" id="3"></i>
+                    </li>
+                    <li class="songItem">
+                        <span>04</span>
+                        <img src="" alt="">
+                        <h5>Ire <br>
+                            <div class="subtitle">Adekunle Gold</div>
+                        </h5>
+                        <i class="fa playSong fa-circle-play" id="4"></i>
+                    </li>
+                    <li class="songItem">
+                        <span>05</span>
+                        <img src="" alt="">
+                        <h5>Ire <br>
+                            <div class="subtitle">Adekunle Gold</div>
+                        </h5>
+                        <i class="fa playSong fa-circle-play" id="5"></i>
+                    </li>
+                    <li class="songItem">
+                        <span>06</span>
+                        <img src="" alt="">
+                        <h5>Ire <br>
+                            <div class="subtitle">Adekunle Gold</div>
+                        </h5>
+                        <i class="fa playSong fa-circle-play" id="6"></i>
+                    </li>
+                    <li class="songItem">
+                        <span>07</span>
+                        <img src="" alt="">
+                        <h5>Ire <br>
+                            <div class="subtitle">Adekunle Gold</div>
+                        </h5>
+                        <i class="fa playSong fa-circle-play" id="7"></i>
+                    </li>
+                    
+                </div>
+            </ul>
+        </div>
+        <!--  ------SIDE-BAR OPTIONS/MENU ENDS----------- -->
+
+<!-- ------------- WEBSITE MAIN SECTION---------------- -->
+        <div class="main-display">
+            <div class="header">
+                <div class="navigation">
+                    <ul>
+                        <li class="links active"><a href="#main">Discover</a></li>
+                        <li class="links"><a href="#latests">New Releases</a></li>
+                        <li class="links"><a href="#">Genres</a></li>
+                        <li class="links" id="favorite"><a href="#">Fvorite List</a></li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <p><i class="fas fa-search"></i></p>
+                    <input type="text" id="search" name="search" placeholder="search">
+                </div>
+                <div class="menu" ><i class="fas fa-chevron-left" id="nav-menu"></i></div>
+            </div>
+            
+            <div class="main-content" id="main" >
+                <div class="content" id="home">
+                    <div class="background-text">
+                        <h2>Local and Int'l Hits</h2>
+                        <h5>Create and add music of your choice ranging from different genres to albums.</h5>
+                        <div class="buttons">
+                            <button>Create</button>
+                            <button>Share</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="favorite" id='latest'>
+                    <div class="favorite-content">
+                        <h3>Favorite Songs</h3>
+                        <p id="notify"></p>
+                        <li class="songItem">
+                            <img src="" alt="">
+                            <h5>
+                                <div class="title">Ire</div>
+                                <div class="subtitle">Adekunle Gold</div>
+                            </h5>
+                            <i class="fa playSong fa-circle-play" id="8"></i>
+                            <i class="fa fa-trash-can"></i>
+                        </li>
+                        <li class="songItem">
+                            <img src="" alt="">
+                            <h5>
+                                <div class="title">Ire</div>
+                                <div class="subtitle">Adekunle Gold</div>
+                            </h5>
+                            <i class="fa playSong fa-circle-play" id="9"></i>
+                            <i class="fa fa-trash-can"></i>
+                        </li>
+                        <li class="songItem">
+                            <img src="" alt="">
+                            <h5>
+                                <div class="title">Ire</div>
+                                <div class="subtitle">Adekunle Gold</div>
+                            </h5>
+                            <i class="fa playSong fa-circle-play" id="10"></i>
+                            <i class="fa fa-trash-can"></i>
+                        </li>
+                        <li class="songItem">
+                            <img src="" alt="">
+                            <h5>
+                                <div class="title">Ire</div>
+                                <div class="subtitle">Adekunle Gold</div>
+                            </h5>
+                            <i class="fa playSong fa-circle-play" id="11"></i>
+                            <i class="fa fa-trash-can"></i>
+                        </li>
+                        <li class="songItem">
+                            <img src="" alt="">
+                            <h5>
+                                <div class="title">Ire</div>
+                                <div class="subtitle">Adekunle Gold</div>
+                            </h5>
+                            <i class="fa playSong fa-circle-play" id="12"></i>
+                            <i class="fa fa-trash-can"></i>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="playlist" id="playLists"></div>
+            <div class="albums" id="albums"></div> -->
+            <!-- <div class="artists" id="myArtists">
+                <div class="folders">
+                    <li class="artItem">
+                        <div class="art-description">
+                            <img src="" alt="">
+                            <div class="artistName">
+                                <h3>Adekunle Gold</h3>
+                                <i class="fa playSong fa-circle-play" id="1"></i>
+                            </div>
+                        </div>
+                        <div class="tracks">
+                            <div class="trackList">
+                                <span>01</span>
+                                <h5>Ire <br>
+                                    <div class="subtitle">Released 2019</div>
+                                </h5>
+                                <i class="fa playSong fa-circle-play" id="1"></i>
+                                <i class="fa fa-heart" id="1"></i>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </div> -->
+        </div>
+
+
+<!-- --------------------PLAY BUTTON CONTROL OPTIONS---------------- -->
+        <div class="masterPlay">
+            <div class="play-wave" id="wavy">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="songDescription">
+                <img src="back.jpeg" alt="" class="poster" id="playImg">
+                <h5 class="songTitle">
+                    <div class="title"></div>
+                    <div class="subtitle">Now Playing...</div>
+                </h5>
+            </div>
+            
+            <div class="play-icon">
+                <i class="fas shuffle fa-shuffle" id="shuffle"  title="shuffle" >shuffle</i>
+                <i class="fas fa-backward-fast" id="prev" title='Prev'></i>
+                <i class="fas fa-circle-play" id="masterPLay" ></i>
+                <i class="fas fa-forward-fast" id="next" title="Next"></i>
+                <a href="" id="downloadSong" download><i class="fas fa-cloud-arrow-down"  title="download track" ></i></a>
+            </div>
+            <div class="counter">
+                <div class="time">
+                    <span id="starTime">0:00</span>
+                    <div class="bar">
+                        <input type="range" min="0" max="100" id="jumpTo">
+                        <div class="bar-count" id="bar2"></div>
+                        <div class="cursor" id="timeCursor"></div>
+                    </div>
+                    <span id="endTime">0:00</span>
+                </div>
+                <div class="volume">
+                    <i class="fas fa-volume-high" id="volIcon"></i>
+                    <div class="vol-bar">
+                        <input type="range" min="0" max="100" id="volume">
+                        <div class="bar-count" id="volBar"></div>
+                        <div class="cursor" id="volCursor"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -------------LATEST SONG SECTION---------------- -->
+    <section class="newRelease" id="latests">
+        <h3>Latest Songs</h3>
+        <div class="songs" id="latest">
+            <button type="button" id="btnLeft" onclick="swipe(1)"><i class="fas fa-chevron-left"></i></button>
+            <button type="button" id="btnRight" onclick="swipe(-1)"><i class="fas fa-chevron-right"></i></button>
+            <div class="collections" id="collection">
+                <li class="songItem">
+                    <div class="songBtn">
+                        <img src="" alt="">
+                        <div class="songIcn">
+                            <i class="fa playSong fa-circle-play" id="13"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                    </div>
+                    <h5> 
+                        <div class="title"></div>
+                        <div class="subtitle">Adekunle Gold</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="songBtn">
+                        <img src="" alt="">
+                        <div class="songIcn">
+                            <i class="fa playSong fa-circle-play" id="14"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                    </div>
+                    <h5> 
+                        <div class="title"></div>
+                        <div class="subtitle">Adekunle Gold</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="songBtn">
+                            <img src="" alt="">
+                        <div class="songIcn">
+                            <i class="fa playSong fa-circle-play" id="15"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                    </div>
+                    <h5> 
+                        <div class="title"></div>
+                        <div class="subtitle">Adekunle Gold</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="songBtn">
+                            <img src="" alt="">
+                        <div class="songIcn">
+                            <i class="fa playSong fa-circle-play" id="16"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                    </div>
+                    <h5> 
+                        <div class="title"></div>
+                        <div class="subtitle">Adekunle Gold</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="songBtn">
+                            <img src="" alt="">
+                        <div class="songIcn">
+                            <i class="fa playSong fa-circle-play" id="17"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                    </div>
+                    <h5> 
+                        <div class="title"></div>
+                        <div class="subtitle">Adekunle Gold</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="songBtn">
+                            <img src="" alt="">
+                        <div class="songIcn">
+                            <i class="fa playSong fa-circle-play" id="18"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                    </div>
+                    <h5> 
+                        <div class="title"></div>
+                        <div class="subtitle">Adekunle Gold</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="songBtn">
+                            <img src="" alt="">
+                        <div class="songIcn">
+                            <i class="fa playSong fa-circle-play" id="19"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                    </div>
+                    <h5> 
+                        <div class="title"></div>
+                        <div class="subtitle">Adekunle Gold</div>
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <div class="songBtn">
+                        <img src="" alt="">
+                        <div class="songIcn">
+                            <i class="fa playSong fa-circle-play" id="20"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                    </div>
+                    <h5> 
+                        <div class="title"></div>
+                        <div class="subtitle">Adekunle Gold</div>
+                    </h5>
+                </li>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>
