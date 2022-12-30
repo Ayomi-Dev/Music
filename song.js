@@ -218,7 +218,7 @@ const showSong = () => {
                 songTitle.innerHTML = name;
                 songDownload.setAttribute('download', name)
             })
-        })
+        });
     });
 }
 showSong();
