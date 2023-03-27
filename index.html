@@ -13,370 +13,395 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
     <title>Music App</title>
-    <script src="App.js" async></script>
-    <script src="song.js" async></script>
+    <script src="App.js" defer></script>
+    <!-- <script src="song.js" defer></script> -->
 </head>
 <body>
-    <div class="container">
-        <!-- ------SIDE-BAR OPTIONS/MENU STARTS------------ -->
-        <div class="sideBar" id="sideBar">
-            <div class="toggle" id="toggle">
-                <i class="fas fa-music" ></i>
-                <h2>My Library</h2>
-                <i class="fas fa-chevron-right"></i>
-            </div>
+    <!--------------------- NAVIGATIONS SECTION STARTS HERE----------- -->
+    <div class="header">
+        <div class="navigation">
             <ul>
-                <li class="nav-list active" id="showHome">
-                        <i class="fas fa-house-user" style="--clr:#f44336;"></i>
-                        <span>Home</span>
-                </li>
-                <li class="nav-list" id="showAlbums">
-                    <i class="fas fa-record-vinyl" style="--clr:#ffa117;" ></i>
-                    <span>Albums</span>
-                </li>
-                <li class="nav-list" id="artist">
-                    <i class="fa-regular fa-user" style="--clr:#0fc707;" ></i>
-                    <span>Artists</span>
-                </li>
-                <li class="nav-list" id="playlist">
-                     <i class="fas fa-music " style="--clr:#2196f3;" ></i>
-                    <span>Playlists</span>
-                </li>
-                <div class="sub-playlist">
-                    <h3><i class="fa fa-record-vinyl"></i>Frequently played</h3>
-                    <li class="songItem">
-                        <span>01</span>
-                        <img src="" alt="">
-                        <h5>Ire <br>
-                            <div class="subtitle">Adekunle Gold</div>
-                        </h5>
-                        <i class="fa  playSong fa-circle-play" id="1"></i>
-                    </li>
-                    <li class="songItem">
-                        <span>02</span>
-                        <img src="" alt="">
-                        <h5>Ire <br>
-                            <div class="subtitle">Adekunle Gold</div>
-                        </h5>
-                        <i class="fa playSong fa-circle-play" id="2"></i>
-                    </li>
-                    <li class="songItem">
-                        <span>03</span>
-                        <img src="" alt="">
-                        <h5>Ire <br>
-                            <div class="subtitle">Adekunle Gold</div>
-                        </h5>
-                        <i class="fa playSong fa-circle-play" id="3"></i>
-                    </li>
-                    <li class="songItem">
-                        <span>04</span>
-                        <img src="" alt="">
-                        <h5>Ire <br>
-                            <div class="subtitle">Adekunle Gold</div>
-                        </h5>
-                        <i class="fa playSong fa-circle-play" id="4"></i>
-                    </li>
-                    <li class="songItem">
-                        <span>05</span>
-                        <img src="" alt="">
-                        <h5>Ire <br>
-                            <div class="subtitle">Adekunle Gold</div>
-                        </h5>
-                        <i class="fa playSong fa-circle-play" id="5"></i>
-                    </li>
-                    <li class="songItem">
-                        <span>06</span>
-                        <img src="" alt="">
-                        <h5>Ire <br>
-                            <div class="subtitle">Adekunle Gold</div>
-                        </h5>
-                        <i class="fa playSong fa-circle-play" id="6"></i>
-                    </li>
-                    <li class="songItem">
-                        <span>07</span>
-                        <img src="" alt="">
-                        <h5>Ire <br>
-                            <div class="subtitle">Adekunle Gold</div>
-                        </h5>
-                        <i class="fa playSong fa-circle-play" id="7"></i>
-                    </li>
-                    
-                </div>
+                <li class="links active"><a href="#main">Discover</a></li>
+                <li class="links"><a href="#trend">New Releases</a></li>
+                <li class="links"><a href="#musicGenre">Genres</a></li>
             </ul>
         </div>
-        <!--  ------SIDE-BAR OPTIONS/MENU ENDS----------- -->
-
-<!-- ------------- WEBSITE MAIN SECTION---------------- -->
-        <div class="main-display">
-            <div class="header">
-                <div class="navigation">
-                    <ul>
-                        <li class="links active"><a href="#main">Discover</a></li>
-                        <li class="links"><a href="#latests">New Releases</a></li>
-                        <li class="links"><a href="#">Genres</a></li>
-                        <li class="links" id="favorite"><a href="#">Fvorite List</a></li>
-                    </ul>
-                </div>
-                <div class="search">
-                    <p><i class="fas fa-search"></i></p>
-                    <input type="text" id="search" name="search" placeholder="search">
-                </div>
-                <div class="menu" ><i class="fas fa-chevron-left" id="nav-menu"></i></div>
-            </div>
-            
-            <div class="main-content" id="main" >
-                <div class="content" id="home">
-                    <div class="background-text">
-                        <h2>Local and Int'l Hits</h2>
-                        <h5>Create and add music of your choice ranging from different genres to albums.</h5>
-                        <div class="buttons">
-                            <button>Create</button>
-                            <button>Share</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="favorite" id='latest'>
-                    <div class="favorite-content">
-                        <h3>Favorite Songs</h3>
-                        <p id="notify"></p>
-                        <li class="songItem">
-                            <img src="" alt="">
-                            <h5>
-                                <div class="title">Ire</div>
-                                <div class="subtitle">Adekunle Gold</div>
-                            </h5>
-                            <i class="fa playSong fa-circle-play" id="8"></i>
-                            <i class="fa fa-trash-can"></i>
-                        </li>
-                        <li class="songItem">
-                            <img src="" alt="">
-                            <h5>
-                                <div class="title">Ire</div>
-                                <div class="subtitle">Adekunle Gold</div>
-                            </h5>
-                            <i class="fa playSong fa-circle-play" id="9"></i>
-                            <i class="fa fa-trash-can"></i>
-                        </li>
-                        <li class="songItem">
-                            <img src="" alt="">
-                            <h5>
-                                <div class="title">Ire</div>
-                                <div class="subtitle">Adekunle Gold</div>
-                            </h5>
-                            <i class="fa playSong fa-circle-play" id="10"></i>
-                            <i class="fa fa-trash-can"></i>
-                        </li>
-                        <li class="songItem">
-                            <img src="" alt="">
-                            <h5>
-                                <div class="title">Ire</div>
-                                <div class="subtitle">Adekunle Gold</div>
-                            </h5>
-                            <i class="fa playSong fa-circle-play" id="11"></i>
-                            <i class="fa fa-trash-can"></i>
-                        </li>
-                        <li class="songItem">
-                            <img src="" alt="">
-                            <h5>
-                                <div class="title">Ire</div>
-                                <div class="subtitle">Adekunle Gold</div>
-                            </h5>
-                            <i class="fa playSong fa-circle-play" id="12"></i>
-                            <i class="fa fa-trash-can"></i>
-                        </li>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="playlist" id="playLists"></div>
-            <div class="albums" id="albums"></div> -->
-            <!-- <div class="artists" id="myArtists">
-                <div class="folders">
-                    <li class="artItem">
-                        <div class="art-description">
-                            <img src="" alt="">
-                            <div class="artistName">
-                                <h3>Adekunle Gold</h3>
-                                <i class="fa playSong fa-circle-play" id="1"></i>
-                            </div>
-                        </div>
-                        <div class="tracks">
-                            <div class="trackList">
-                                <span>01</span>
-                                <h5>Ire <br>
-                                    <div class="subtitle">Released 2019</div>
-                                </h5>
-                                <i class="fa playSong fa-circle-play" id="1"></i>
-                                <i class="fa fa-heart" id="1"></i>
-                            </div>
-                        </div>
-                    </li>
-                </div>
-            </div> -->
+        <div class="search">
+            <p><i class="fas fa-search"></i></p>
+            <input type="text" id="search" name="search" placeholder="search artists here">
         </div>
+        <div class="menu" >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- ------SIDE-BAR OPTIONS/MENU STARTS------------ -->
+    <div class="sideBar" id="sideBar">
+        <div class="toggle" id="toggle">
+            <i class="fas fa-music" ></i>
+            <h2>My Library</h2>
+        </div>
+        <ul>
+            <li class="nav-list active" id="home">
+                    <i class="fas fa-house-user" style="--clr:#f44336;"></i>
+                    <span>Home</span>
+            </li>
+            <li class="nav-list" id="albums">
+                <i class="fas fa-record-vinyl" style="--clr:#ffa117;" ></i>
+                <span>Albums</span>
+            </li>
+            <li class="nav-list" id="artist">
+                <i class="fa-regular fa-user" style="--clr:#0fc707;" ></i>
+                <span>Artists</span>
+            </li>
+            <li class="nav-list" id="playlist">
+                 <i class="fas fa-music " style="--clr:#2196f3;" ></i>
+                <span>Playlists</span>
+                <p class="songNumber"></p>
+            </li>
+        </ul>   
+    </div>
+    <!--  ------SIDE-BAR OPTIONS/MENU ENDS----------- -->
+    <!--------------------- NAVIGATION SECTION ENDS HERE----------- -->
 
-
-<!-- --------------------PLAY BUTTON CONTROL OPTIONS---------------- -->
-        <div class="masterPlay">
-            <div class="play-wave" id="wavy">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="songDescription">
-                <img src="back.jpeg" alt="" class="poster" id="playImg">
-                <h5 class="songTitle">
-                    <div class="title"></div>
-                    <div class="subtitle">Now Playing...</div>
-                </h5>
-            </div>
-            
-            <div class="play-icon">
-                <i class="fas shuffle fa-shuffle" id="shuffle"  title="shuffle" >shuffle</i>
-                <i class="fas fa-backward-fast" id="prev" title='Prev'></i>
-                <i class="fas fa-circle-play" id="masterPLay" ></i>
-                <i class="fas fa-forward-fast" id="next" title="Next"></i>
-                <a href="" id="downloadSong" download><i class="fas fa-cloud-arrow-down"  title="download track" ></i></a>
-            </div>
-            <div class="counter">
-                <div class="time">
-                    <span id="starTime">0:00</span>
-                    <div class="bar">
-                        <input type="range" min="0" max="100" id="jumpTo">
-                        <div class="bar-count" id="bar2"></div>
-                        <div class="cursor" id="timeCursor"></div>
+<!----------------------------- HERO SECTION STARTS HERE ---------------------->
+    <div class="container">
+        <!--------------------------- MAIN SECTION STARTS HERE----------------------- -->
+        <div class="main-content" id="main" >
+            <div class="content" id="home">
+                <div class="box">
+                    <div class="boxLabel l1">
+                        <img src="hear.jpeg" alt="">
+                        <div class="overlay">
+                            <p style="--clr:#fff;">Hear it.</p>
+                        </div>
                     </div>
-                    <span id="endTime">0:00</span>
+                    <div class="boxLabel l2">
+                        <img src="enjoy.jpeg" alt="">
+                        <div class="overlay">
+                            <p style="--clr:#ffa117;">Enjoy it.</p>
+                        </div>
+                    </div>
+                    <div class="boxLabel l3">
+                        <img src="whitney.jpeg" alt="">
+                        <div class="overlay">
+                            <p style="--clr:#2196f3;">Sing it.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="volume">
-                    <i class="fas fa-volume-high" id="volIcon"></i>
-                    <div class="vol-bar">
-                        <input type="range" min="0" max="100" id="volume">
-                        <div class="bar-count" id="volBar"></div>
-                        <div class="cursor" id="volCursor"></div>
+                <div class="box">
+                    <div class="boxLabel l4">
+                        <img src="music.jpeg" alt="">
+                        <div class="overlay">
+                            <p style="--clr:#ffa117;">Play it.</p>
+                            <span>Don't get disconnected from the vibe.</span>
+                        </div>
                     </div>
+                    <div class="boxLabel l5">
+                        <img src="guitar.jpeg" alt="">
+                        <div class="overlay">
+                            <p style="--clr:#f44336;">Create it.</p>
+                            <span>Your favorite songs on the go.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box b3">
+                    <div class="boxLabel l6">
+                        <img src="song.jpeg" alt="">
+                        <div class="overlay">
+                            <p style="--clr:#2196f3;">Own it.</p>
+                        </div>
+                    </div>
+                    <div class="boxLabel l7">
+                        <img src="feel.jpeg" alt="">
+                        <div class="overlay">
+                            <p style="--clr:#0fc707;">Feel it.</p>
+                        </div>
+                    </div>
+                    <div class="boxLabel l8">
+                        <img src="rev1.jpeg" alt="">
+                        <div class="overlay">
+                            <p style="--clr:#ffa117;">Act it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------------------- MAIN SECTION ENDS HERE----------------------- -->
+
+            <!--------------------------- ALBUMS SECTION STARTS HERE----------------------- -->
+            <div class="albums">
+                <div class="subContent">
+                        <div class="songItem">
+                            <div class="image">
+                                <img src="dunsin.jpeg" alt="">
+                                <div class="albumName">
+                                    <h3>The Birth Of Revival</h3>
+                                    <p>Dunsin Oyekan</p>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <p>Dunsin Oyekan, known for his powerful and uplifting Songs
+                                    released this new album on January 23, 2023. As expected, this
+                                    14-track album demonstrates power of GOD through the 
+                                    combination of soulful melodies and powerful lyrics filled 
+                                    with strong message of hope and revival. 
+                                </p>
+                                <div class="listen">
+                                    <button class="albumBtn" id="dunsin">Click to Listen</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="songItem">
+                            <div class="image">
+                                <img src="nat.jpeg" alt="">
+                                <div class="albumName">
+                                    <h3>Names Of God</h3>
+                                    <p>Nathaniel Bassey</p>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <p>The Names of God by Nathaniel Bassey is collection of beautiful
+                                    , intimacy, powerful songs leading beleivers to God. Released in 2022
+                                    and making waves not just in Nigeria but globally. 
+                                </p>
+                                <div class="listen">
+                                    <button class="albumBtn" id="nat">Click to Listen</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="songItem">
+                            <div class="image">
+                                <img src="chike.jpeg" alt="">
+                                <div class="albumName">
+                                    <h3>Boo Of The Booless</h3>
+                                    <p>Chike</p>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <p>A debut album released in 2020 has been a hit in the afro beat industry.
+                                    Its one of the finest you really want to listen to.
+                                </p>
+                                <div class="listen">
+                                    <button class="albumBtn" id="chike">Click to Listen</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="songItem">
+                            <div class="image">
+                                <img src="johnny.jpeg" alt="">
+                                <div class="albumName">
+                                    <h3>Before We Fall Asleep</h3>
+                                    <p>Johnny Drille</p>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <p>A debut studio album released in 2021, is a collection of finest
+                                    soulful songs sang in Johnny's rich voice. Its a hit that has lingered in
+                                    the industry and lovers for long.
+                                </p>
+                                <div class="listen">
+                                    <button class="albumBtn" id="johnny">Click to Listen</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="songItem" id="mavrick">
+                            <div class="image">
+                                <img src="mavrick.jpeg" alt="">
+                                <div class="albumName">
+                                    <h3>Elevation worship</h3>
+                                    <p>Mavrick City</p>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <p>One of the most listened to albums by beleivers all around the world. This
+                                    group are truly blessed and delivers powerful songs that lifts the soul.
+                                </p>
+                                <div class="listen">
+                                    <button class="albumBtn" id="mavrick">Click to Listen</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="songItem" id="pop">
+                            <div class="image">
+                                <img src="19.jpg" alt="">
+                                <div class="albumName">
+                                    <h3>The Birth Of Revival</h3>
+                                    <p>Dunsin Oyekan</p>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <p>Dunsin Oyekan, known for his powerful and uplifting Songs
+                                    released this new album on January 23, 2023. As expected, this
+                                    14-track album demonstrates power of GOD through the 
+                                    combination of soulful melodies and powerful lyrics filled 
+                                    with strong message of hope and revival. 
+                                </p>
+                                <div class="listen">
+                                    <button class="albumBtn">Click to Listen</button>
+                                </div>
+                            </div>
+                        </div> -->
+                </div>
+            </div>
+            <!--------------------------- ALBUMS SECTION ENDS HERE----------------------- -->
+
+            <!--------------------------- ALL TRACKS SECTION STARTS HERE----------------------- -->
+            <div class="artistes">
+                    <div class="allTracks">
+                        
+                    </div>
+            </div>
+            <!--------------------------- ALL TRACKS SECTION ENDS HERE----------------------- -->
+
+            <!--------------------------- GENRE/PLAYLIST SECTION STARTS HERE----------------------- -->
+            <div class="favorite">
+                <div class="favContent">
+                    <h3 class="favHeader">Add your favs here</h3>
+                </div>
+            </div>
+            <!--------------------------- GENRE/PLAYLIST SECTION ENDS HERE----------------------- -->
+        </div> 
+    </div>
+    <!-------- SECTION FOR PREVIEWING TRACKS FOR EACH ALBUM SELECTED ----------->
+    <section class="previewAlbum">
+        <i class="fa fa-times"></i>
+        <div class="preview active" id="dunsin">
+            <div class="prevImg">
+                <img src="dunsin.jpeg" alt="">
+            </div>
+            <div class="prevTracks">
+            </div>
+        </div>
+        <div class="preview" id="nat">
+            <div class="prevImg">
+                <img src="nat.jpeg" alt="">
+            </div>
+            <div class="prevTracks">
+            </div>
+        </div>
+        <div class="preview" id="chike">
+            <div class="prevImg">
+                <img src="chike.jpeg" alt="">
+            </div>
+            <div class="prevTracks">
+            </div>
+        </div>
+        <div class="preview" id="johnny">
+            <div class="prevImg">
+                <img src="johnny.jpeg" alt="">
+            </div>
+            <div class="prevTracks">
+            </div>
+        </div>
+        <div class="preview" id="mavrick">
+            <div class="prevImg">
+                <img src="mavrick.jpeg" alt="">
+            </div>
+            <div class="prevTracks">
+            </div>
+        </div>
+        <div class="preview" id="pop">
+            <div class="prevImg">
+                <img src="19.jpg" alt="">
+            </div>
+            <div class="prevTracks">
+            </div>
+        </div>
+        
+    </section>
+    <!-- -------------LATEST/TRENDING AND GENRES SONG SECTION---------------- -->
+    <section class="newRelease" id="trend">
+        <h3 style="--clr:#fff;">Trends For You</h3>
+        <div class="trendContainer">
+            <i class="fa btnLeft fa-angle-left" id="top"></i>
+            <i class="fa btnRight fa-angle-right" id="top"></i>
+            <div class="genre trends">   
+            </div> 
+        </div>       
+    </section>
+    <section id="musicGenre" >
+        <section class="gospel" id="gospel">
+            <h3 style="--clr:#f44336;">Gospel</h3>
+            <div class="gospelContainer">
+                <i class="fa btnLeft fa-angle-left" id="gospel"></i>
+                <i class="fa btnRight fa-angle-right" id="gospel"></i>
+                <div class="genre gospelSongs">   
+                </div> 
+            </div>       
+        </section>
+        <section class="afro" id="afro">
+            <h3 style="--clr:#ffa117;">Afro Beats</h3>
+            <div class="afroTracks">
+                <i class="fa btnLeft fa-angle-left" id="afro"></i>
+                <i class="fa btnRight fa-angle-right" id="afro"></i>
+                <div class="genre afroSongs">   
+                </div> 
+            </div>       
+        </section>
+        <section class="classic" id="classic">
+            <h3 style="--clr:#0fc707;">Classics</h3>
+            <div class="classicTracks">
+                <i class="fa btnLeft fa-angle-left" id="classic"></i>
+                <i class="fa btnRight fa-angle-right" id="classic"></i>
+                <div class="genre classicSongs">   
+                </div> 
+            </div>       
+        </section>
+        <section class="jazz" id="jazz">
+            <h3 style="--clr:#2196f3;">Jazz</h3>
+            <div class="jazzTracks">
+                <i class="fa btnLeft fa-angle-left" id="jazz"></i>
+                <i class="fa btnRight fa-angle-right" id="jazz"></i>
+                <div class="genre jazzSongs">   
+                </div> 
+            </div>       
+        </section>
+    </section>
+    
+    <!-- --------------------CONTROL BUTTONS SECTION---------------- -->
+    <div class="masterPlay">
+        <div class="play-wave" id="wavy">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="songDescription">
+            <img src="" alt="" class="playImg" id="playImg">
+            <div class="trackTitle">
+                <p class="playTitle"></p>
+                <span class="playName"></span>
+            </div>
+        </div>
+        
+        <div class="play-icon">
+            <i class="fas shuffle fa-shuffle" id="shuffle"  title="noshuffle" ></i>
+            <i class="fas fa-backward-fast" id="prev" title='Prev'></i>
+            <i class="fas fa-circle-play" id="masterPlay" title=""></i>
+            <i class="fas fa-forward-fast" id="next" title="Next"></i>
+            <i class="fas fa-chevron-up" title="open"></i>
+            <!-- <a href="" target="_blank" class="downloadSong" download ><i class="fas fa-cloud-arrow-down" title="download"></i></a> -->
+        </div>
+        <div class="counter">
+            <div class="time">
+                <span id="starTime">0:00</span>
+                <div class="bar">
+                    <input type="range" min="0" max="100" id="jumpTo">
+                    <div class="bar-count" id="bar2"></div>
+                    <div class="cursor" id="timeCursor"></div>
+                </div>
+                <span id="endTime">0:00</span>
+            </div>
+            <div class="volume">
+                <i class="fas fa-volume-high" id="volIcon"></i>
+                <div class="vol-bar">
+                    <input type="range" min="0" max="100" id="volume">
+                    <div class="bar-count" id="volBar"></div>
+                    <div class="cursor" id="volCursor"></div>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!-- -------------LATEST SONG SECTION---------------- -->
-    <section class="newRelease" id="latests">
-        <h3>Latest Songs</h3>
-        <div class="songs" id="latest">
-            <button type="button" id="btnLeft" onclick="swipe(1)"><i class="fas fa-chevron-left"></i></button>
-            <button type="button" id="btnRight" onclick="swipe(-1)"><i class="fas fa-chevron-right"></i></button>
-            <div class="collections" id="collection">
-                <li class="songItem">
-                    <div class="songBtn">
-                        <img src="" alt="">
-                        <div class="songIcn">
-                            <i class="fa playSong fa-circle-play" id="13"></i>
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <h5> 
-                        <div class="title"></div>
-                        <div class="subtitle">Adekunle Gold</div>
-                    </h5>
-                </li>
-                <li class="songItem">
-                    <div class="songBtn">
-                        <img src="" alt="">
-                        <div class="songIcn">
-                            <i class="fa playSong fa-circle-play" id="14"></i>
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <h5> 
-                        <div class="title"></div>
-                        <div class="subtitle">Adekunle Gold</div>
-                    </h5>
-                </li>
-                <li class="songItem">
-                    <div class="songBtn">
-                            <img src="" alt="">
-                        <div class="songIcn">
-                            <i class="fa playSong fa-circle-play" id="15"></i>
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <h5> 
-                        <div class="title"></div>
-                        <div class="subtitle">Adekunle Gold</div>
-                    </h5>
-                </li>
-                <li class="songItem">
-                    <div class="songBtn">
-                            <img src="" alt="">
-                        <div class="songIcn">
-                            <i class="fa playSong fa-circle-play" id="16"></i>
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <h5> 
-                        <div class="title"></div>
-                        <div class="subtitle">Adekunle Gold</div>
-                    </h5>
-                </li>
-                <li class="songItem">
-                    <div class="songBtn">
-                            <img src="" alt="">
-                        <div class="songIcn">
-                            <i class="fa playSong fa-circle-play" id="17"></i>
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <h5> 
-                        <div class="title"></div>
-                        <div class="subtitle">Adekunle Gold</div>
-                    </h5>
-                </li>
-                <li class="songItem">
-                    <div class="songBtn">
-                            <img src="" alt="">
-                        <div class="songIcn">
-                            <i class="fa playSong fa-circle-play" id="18"></i>
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <h5> 
-                        <div class="title"></div>
-                        <div class="subtitle">Adekunle Gold</div>
-                    </h5>
-                </li>
-                <li class="songItem">
-                    <div class="songBtn">
-                            <img src="" alt="">
-                        <div class="songIcn">
-                            <i class="fa playSong fa-circle-play" id="19"></i>
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <h5> 
-                        <div class="title"></div>
-                        <div class="subtitle">Adekunle Gold</div>
-                    </h5>
-                </li>
-                <li class="songItem">
-                    <div class="songBtn">
-                        <img src="" alt="">
-                        <div class="songIcn">
-                            <i class="fa playSong fa-circle-play" id="20"></i>
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <h5> 
-                        <div class="title"></div>
-                        <div class="subtitle">Adekunle Gold</div>
-                    </h5>
-                </li>
-            </div>
-        </div>
-    </section>
-
-    
-
 
 
 
